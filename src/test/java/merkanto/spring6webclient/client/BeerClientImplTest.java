@@ -154,6 +154,7 @@ class BeerClientImplTest {
 
     @Test
     void listBeer() {
+
         AtomicBoolean atomicBoolean = new AtomicBoolean(false);
 
         client.listBeer().subscribe(response -> {
@@ -162,5 +163,6 @@ class BeerClientImplTest {
         });
 
         await().untilTrue(atomicBoolean);
+
     }
 }
